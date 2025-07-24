@@ -13,7 +13,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.Color;
-import javax.swing.JPanel;
 
 public class Register {
 
@@ -57,67 +56,61 @@ public class Register {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBackground(new Color(255, 255, 255));
-		panel.setBounds(20, 10, 302, 486);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
-		
-		 ImageIcon iconoM = new ImageIcon(getClass().getResource("/iconos/logo.jpg"));
-	        Image ima = iconoM.getImage().getScaledInstance(70, 50, Image.SCALE_SMOOTH);
+		 ImageIcon iconoM = new ImageIcon(getClass().getResource("/iconos/logoS.jpg"));
+	        Image ima = iconoM.getImage().getScaledInstance(80, 70, Image.SCALE_SMOOTH);
 	        ImageIcon iconoA = new ImageIcon(ima);
 		
 		JLabel lblNewLabel = new JLabel("",iconoA,JLabel.LEFT);
-		lblNewLabel.setBounds(101, 10, 99, 50);
-		panel.add(lblNewLabel);
+		lblNewLabel.setBounds(114, 11, 99, 50);
+		frame.getContentPane().add(lblNewLabel);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre de usuario");
-		lblNewLabel_1.setBounds(33, 89, 122, 13);
-		panel.add(lblNewLabel_1);
+		lblNewLabel_1.setBounds(46, 91, 122, 13);
+		frame.getContentPane().add(lblNewLabel_1);
 		
 		textField = new JTextField();
-		textField.setBounds(33, 110, 245, 27);
-		panel.add(textField);
+		textField.setBounds(46, 112, 245, 27);
+		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Correo");
-		lblNewLabel_1_1.setBounds(33, 157, 122, 13);
-		panel.add(lblNewLabel_1_1);
+		lblNewLabel_1_1.setBounds(46, 159, 122, 13);
+		frame.getContentPane().add(lblNewLabel_1_1);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(33, 178, 245, 27);
-		panel.add(textField_1);
+		textField_1.setBounds(46, 180, 245, 27);
+		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Contraseña");
-		lblNewLabel_1_2.setBounds(33, 235, 122, 13);
-		panel.add(lblNewLabel_1_2);
+		lblNewLabel_1_2.setBounds(46, 237, 122, 13);
+		frame.getContentPane().add(lblNewLabel_1_2);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(33, 258, 245, 25);
-		panel.add(passwordField);
+		passwordField.setBounds(46, 260, 245, 25);
+		frame.getContentPane().add(passwordField);
 		
 		JLabel lblNewLabel_1_2_1 = new JLabel("Confirman contraseña");
-		lblNewLabel_1_2_1.setBounds(33, 313, 146, 13);
-		panel.add(lblNewLabel_1_2_1);
+		lblNewLabel_1_2_1.setBounds(46, 315, 146, 13);
+		frame.getContentPane().add(lblNewLabel_1_2_1);
 		
 		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(33, 336, 245, 25);
-		panel.add(passwordField_1);
+		passwordField_1.setBounds(46, 338, 245, 25);
+		frame.getContentPane().add(passwordField_1);
 		
 		JButton btnNewButton = new JButton("Registrarse");
-		btnNewButton.setBounds(93, 394, 107, 21);
-		panel.add(btnNewButton);
+		btnNewButton.setBounds(106, 396, 107, 21);
+		frame.getContentPane().add(btnNewButton);
 		btnNewButton.setBackground(new Color(192, 192, 192));
 		
 		JLabel lblNewLabel_2 = new JLabel("ya tienes cuenta?");
-		lblNewLabel_2.setBounds(49, 447, 107, 13);
-		panel.add(lblNewLabel_2);
+		lblNewLabel_2.setBounds(62, 449, 107, 13);
+		frame.getContentPane().add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Acceder al Login");
-		lblNewLabel_3.setBounds(167, 447, 97, 13);
-		panel.add(lblNewLabel_3);
+		lblNewLabel_3.setBounds(180, 449, 97, 13);
+		frame.getContentPane().add(lblNewLabel_3);
 	}
 }
