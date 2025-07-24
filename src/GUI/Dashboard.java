@@ -79,12 +79,12 @@ public class Dashboard {
 		
 		JLabel lblNewLabel_1 = new JLabel("Tareas pendientes");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1.setBounds(10, 21, 115, 21);
+		lblNewLabel_1.setBounds(10, 20, 115, 21);
 		panel.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("0");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 36));
-		lblNewLabel_2.setBounds(10, 53, 46, 31);
+		lblNewLabel_2.setBounds(20, 43, 46, 31);
 		panel.add(lblNewLabel_2);
 		
 		JPanel panel_1 = new JPanel();
@@ -95,12 +95,12 @@ public class Dashboard {
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Tareas Creadas");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1.setBounds(10, 20, 102, 13);
+		lblNewLabel_1_1.setBounds(10, 23, 102, 13);
 		panel_1.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("0");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 36));
-		lblNewLabel_3.setBounds(10, 46, 46, 31);
+		lblNewLabel_3.setBounds(10, 38, 46, 36);
 		panel_1.add(lblNewLabel_3);
 		
 		JPanel panel_2 = new JPanel();
@@ -116,7 +116,7 @@ public class Dashboard {
 		
 		JLabel lblNewLabel_4 = new JLabel("0");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 36));
-		lblNewLabel_4.setBounds(10, 44, 46, 29);
+		lblNewLabel_4.setBounds(10, 44, 46, 36);
 		panel_2.add(lblNewLabel_4);
 		
 		JPanel panel_3 = new JPanel();
@@ -132,7 +132,7 @@ public class Dashboard {
 		
 		JLabel lblNewLabel_5 = new JLabel("0");
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 36));
-		lblNewLabel_5.setBounds(10, 45, 46, 28);
+		lblNewLabel_5.setBounds(10, 45, 46, 36);
 		panel_3.add(lblNewLabel_5);
 		
 		JLabel lblNewLabel = new JLabel("Dashboard");
