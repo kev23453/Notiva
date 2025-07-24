@@ -4,10 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
-import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import javax.swing.JSeparator;
 import javax.swing.JPanel;
 import java.awt.Font;
 import java.awt.Color;

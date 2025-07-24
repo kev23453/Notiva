@@ -14,7 +14,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.JPasswordField;
-import javax.swing.JTextArea;
 
 import java.awt.Color;
 import java.awt.event.FocusAdapter;
@@ -71,7 +70,7 @@ public class Login {
         lblNewLabel_2.setBounds(0, 25, 339, 50);
         panel.add(lblNewLabel_2);
 
-        ImageIcon icono1 = new ImageIcon(getClass().getResource("/iconos/logo.jpg"));
+        ImageIcon icono1 = new ImageIcon(getClass().getResource("/iconos/logoS.jpg"));
         Image imageH = icono1.getImage().getScaledInstance(270, 235, Image.SCALE_SMOOTH);
         ImageIcon iconoS = new ImageIcon(imageH);
 
