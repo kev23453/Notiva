@@ -5,10 +5,15 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
+import java.awt.Color;
+import javax.swing.JPanel;
 
 public class Register {
 
@@ -46,15 +51,11 @@ public class Register {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 342, 552);
+		frame.setBackground(new Color(64, 128, 128));
+		frame.getContentPane().setBackground(new Color(255, 255, 255));
+		frame.setBounds(100, 100, 350, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
-		JLabel lblNewLabel = new JLabel("Registrarse");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 21));
-		lblNewLabel.setBounds(88, 26, 157, 27);
-		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre de usuario");
 		lblNewLabel_1.setBounds(49, 89, 122, 13);
@@ -79,6 +80,7 @@ public class Register {
 		frame.getContentPane().add(lblNewLabel_1_2);
 		
 		JButton btnNewButton = new JButton("Registrarse");
+		btnNewButton.setBackground(new Color(192, 192, 192));
 		btnNewButton.setBounds(109, 394, 107, 21);
 		frame.getContentPane().add(btnNewButton);
 		
@@ -101,6 +103,21 @@ public class Register {
 		passwordField_1 = new JPasswordField();
 		passwordField_1.setBounds(49, 336, 245, 25);
 		frame.getContentPane().add(passwordField_1);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(255, 255, 255));
+		panel.setBounds(20, 22, 288, 474);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		 ImageIcon iconoM = new ImageIcon(getClass().getResource("/iconos/logo.jpg"));
+	        Image ima = iconoM.getImage().getScaledInstance(70, 50, Image.SCALE_SMOOTH);
+	        ImageIcon iconoA = new ImageIcon(ima);
+		
+		JLabel lblNewLabel = new JLabel("",iconoA,JLabel.LEFT);
+		lblNewLabel.setBounds(100, 11, 99, 50);
+		panel.add(lblNewLabel);
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 21));
 	}
-
 }
