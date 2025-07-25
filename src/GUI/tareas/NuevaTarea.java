@@ -22,9 +22,6 @@ public class NuevaTarea {
 	private JFrame frame;
 	private JTextField textField;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,16 +35,10 @@ public class NuevaTarea {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public NuevaTarea() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 340, 607);

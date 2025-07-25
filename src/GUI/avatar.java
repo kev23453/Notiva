@@ -146,7 +146,7 @@ public class avatar {
 		
 		JButton btnNewButton_5 = new JButton("continuar");
 		btnNewButton_5.setBackground(new Color(192, 192, 192));
-		btnNewButton_5.setBounds(192, 456, 112, 33);
+		btnNewButton_5.setBounds(208, 455, 112, 33);
 		frame.getContentPane().add(btnNewButton_5);
 	}
 }
