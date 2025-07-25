@@ -79,7 +79,7 @@ public class Login {
         panel.add(lblNewLabel_3);
 
         JLabel lblMensaje = new JLabel(
-        	    "<html><div style='text-align:center;'> Tu espacio digital para organizar tus notas y colaborar con tus compañeros.</div></html>"
+        	    "<html><div style='text-align:center;'> Tu espacio digital para organizar tus tareas/actividades y colaborar con tus compañeros.</div></html>"
         	);
 
         lblMensaje.setForeground(new Color(0, 0, 0));
@@ -143,9 +143,9 @@ public class Login {
         passwordField.setFont(new Font("Tahoma", Font.PLAIN, 15));
         passwordField.setBounds(55, 259, 281, 42);
         panel_1.add(passwordField);
-        // Placeholder password
+        
         String passPlaceholder = "Password";
-        passwordField.setEchoChar((char)0); // Mostrar texto inicialmente
+        passwordField.setEchoChar((char)0); 
         passwordField.setText(passPlaceholder);
         passwordField.setForeground(Color.GRAY);
         passwordField.addFocusListener(new FocusAdapter() {
@@ -154,7 +154,7 @@ public class Login {
                 if (String.valueOf(passwordField.getPassword()).equals(passPlaceholder)) {
                     passwordField.setText("");
                     passwordField.setForeground(Color.BLACK);
-                    passwordField.setEchoChar('•'); // O el carácter que quieras para ocultar
+                    passwordField.setEchoChar('•'); 
                 }
             }
             @Override
@@ -162,7 +162,7 @@ public class Login {
                 if (String.valueOf(passwordField.getPassword()).isEmpty()) {
                     passwordField.setForeground(Color.GRAY);
                     passwordField.setText(passPlaceholder);
-                    passwordField.setEchoChar((char)0); // Mostrar texto cuando está vacío
+                    passwordField.setEchoChar((char)0); 
                 }
             }
         });
