@@ -1,7 +1,5 @@
 package GUI;
-
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
 import javax.swing.JButton;
@@ -15,14 +13,10 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 public class datosPersonales {
-
 	private JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -36,16 +30,10 @@ public class datosPersonales {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public datosPersonales() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 1064, 602);
