@@ -36,7 +36,7 @@ public class datosPersonales {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1064, 602);
+		frame.setBounds(100, 100, 1064, 636);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -65,12 +65,12 @@ public class datosPersonales {
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(255, 255, 255));
-		panel.setBounds(10, 20, 1030, 545);
+		panel.setBounds(10, 20, 1030, 639);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(264, 22, 497, 500);
+		panel_1.setBounds(264, 22, 497, 541);
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
