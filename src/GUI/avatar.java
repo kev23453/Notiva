@@ -43,7 +43,7 @@ public class avatar {
 		for (JButton boton : botones) {
 			if (boton == botonSeleccionado) {
 				boton.setBorderPainted(true);
-				boton.setBorder(BorderFactory.createLineBorder(Color.black, 3));
+				boton.setBorder(BorderFactory.createLineBorder(Color.pink, 3));
 			} else {
 				estilizarBoton(boton);
 				boton.setBorder(null); 
@@ -146,7 +146,7 @@ public class avatar {
 		
 		JButton btnNewButton_5 = new JButton("continuar");
 		btnNewButton_5.setBackground(new Color(192, 192, 192));
-		btnNewButton_5.setBounds(208, 455, 112, 33);
+		btnNewButton_5.setBounds(192, 456, 112, 33);
 		frame.getContentPane().add(btnNewButton_5);
 	}
 }
