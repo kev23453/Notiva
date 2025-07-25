@@ -22,9 +22,6 @@ public class Register {
 	private JPasswordField passwordField;
 	private JPasswordField passwordField_1;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,16 +35,10 @@ public class Register {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public Register() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBackground(new Color(64, 128, 128));
