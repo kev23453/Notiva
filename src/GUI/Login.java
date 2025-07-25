@@ -1,5 +1,4 @@
 package GUI;
-import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -14,26 +13,14 @@ import javax.swing.JPasswordField;
 import java.awt.Color;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class Login {
 
-    private JFrame frame;
+    public JFrame frame;
     private JTextField textField;
     private JPasswordField passwordField;
-
-
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    Login window = new Login();
-                    window.frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
 
     public Login() {
         initialize();
@@ -168,6 +155,19 @@ public class Login {
         panel_1.add(lblNewLabel_5);
         
         JLabel lblNewLabel_6 = new JLabel("create account");
+
+        lblNewLabel_6.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                Register registerWindow = new Register();
+                registerWindow.frame.setVisible(true);
+
+                frame.dispose();
+            }
+        });
+
+        
+
         lblNewLabel_6.setBounds(230, 399, 98, 14);
         panel_1.add(lblNewLabel_6);
     }
