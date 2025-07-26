@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bdfd74e3-95cf-4029-9a9c-acfe7ccd6523" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jcommon_1_0_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfreechart_1_0_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notiva.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Notiva.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/App/conexion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Dashboard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Login$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Register$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Register$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/avatar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/datosPersonales.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/tareas/NuevaTarea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/GUI/tareas/tareasFeedInicio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Modules/Sesion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Modules/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Conexion.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="30OyaEzjBlBzgF0bnMDNAT840Ha" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdfd74e3-95cf-4029-9a9c-acfe7ccd6523" name="Changes" comment="" />
+      <created>1753512981867</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753512981867</updated>
+    </task>
+    <servers />
+  </component>
+</project>
