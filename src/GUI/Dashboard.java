@@ -2,8 +2,10 @@ package GUI;
 
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -128,5 +130,6 @@ public class Dashboard {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblNewLabel.setBounds(27, 64, 128, 21);
 		frame.getContentPane().add(lblNewLabel);
+		
 	}
 }
