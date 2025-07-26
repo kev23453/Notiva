@@ -16,8 +16,22 @@ import javax.swing.BorderFactory;
 public class avatar {
 
 	private JFrame frame;
-	private List<JButton> botones = new ArrayList<>();
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					avatar window = new avatar();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
+	/**
+	 * Create the application.
+	 */
 	public avatar() {
 		initialize();
 	}

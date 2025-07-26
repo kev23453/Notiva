@@ -17,6 +17,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+<<<<<<< HEAD
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -35,5 +36,9 @@
         <SOURCES />
       </library>
     </orderEntry>
+=======
+    <orderEntry type="library" name="jfreechart-1.0.19" level="project" />
+    <orderEntry type="library" name="jcommon-1.0.23" level="project" />
+>>>>>>> a0116b0d1a37c1d7637358a0dccaa129e0426866
   </component>
 </module>
