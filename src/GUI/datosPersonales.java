@@ -17,19 +17,6 @@ public class datosPersonales {
 	private JTextField textField;
 	private JTextField textField_1;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					datosPersonales window = new datosPersonales();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	public datosPersonales() {
 		initialize();
 	}

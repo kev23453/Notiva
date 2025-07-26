@@ -22,19 +22,6 @@ public class NuevaTarea {
 	private JFrame frame;
 	private JTextField textField;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					NuevaTarea window = new NuevaTarea();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	public NuevaTarea() {
 		initialize();
 	}

@@ -18,17 +18,6 @@ public class avatar {
 	private JFrame frame;
 	private List<JButton> botones = new ArrayList<>();
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(() -> {
-			try {
-				avatar window = new avatar();
-				window.frame.setVisible(true);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		});
-	}
-
 	public avatar() {
 		initialize();
 	}
