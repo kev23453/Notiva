@@ -1,12 +1,21 @@
 package Modules;
 
 public class User {
+    private  int userId;
     private String userName;
     private String email;
     private String password;
     private Sesion lastSesion;
 
     public User(String userName, String email, String password, Sesion lastSesion) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.lastSesion = lastSesion;
+    }
+
+    public User(int userId, String userName, String email, String password, Sesion lastSesion) {
+        this.userId = userId;
         this.userName = userName;
         this.email = email;
         this.password = password;
