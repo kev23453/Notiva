@@ -14,19 +14,6 @@ public class tareasFeedInicio {
 
 	private JFrame frame;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					tareasFeedInicio window = new tareasFeedInicio();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
 	public tareasFeedInicio() {
 		initialize();
 	}
