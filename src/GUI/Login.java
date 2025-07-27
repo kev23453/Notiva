@@ -78,7 +78,7 @@ public class Login {
         textField.setBounds(55, 181, 281, 42);
         panel_1.add(textField);
         textField.setColumns(10);
-        // Placeholder username
+
         String userPlaceholder = "Username";
         textField.setText(userPlaceholder);
         textField.setForeground(Color.GRAY);
