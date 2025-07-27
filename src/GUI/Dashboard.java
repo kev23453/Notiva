@@ -15,7 +15,7 @@ import java.awt.Color;
 
 public class Dashboard {
 
-	private JFrame frame;
+	JFrame frame;
 
 	public Dashboard() {
 		initialize();

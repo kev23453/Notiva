@@ -1,11 +1,14 @@
 package Modules;
 
 public class User {
-    private  int userId;
+    private int userId;
     private String userName;
     private String email;
     private String password;
     private Sesion lastSesion;
+
+    // Usuario activo en memoria
+    private static User currentUser;
 
     public User(String userName, String email, String password, Sesion lastSesion) {
         this.userName = userName;
@@ -22,6 +25,15 @@ public class User {
         this.lastSesion = lastSesion;
     }
 
+    // Saber si está activo
+    public boolean isActive() {
+        return lastSesion != null && lastSesion.isLoggedIn();
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -36,5 +48,14 @@ public class User {
 
     public Sesion getLastSesion() {
         return lastSesion;
+    }
+
+    // Métodos para el usuario activo global
+    public static void setCurrentUser(User user) {
+        currentUser = user;
+    }
+
+    public static User getCurrentUser() {
+        return currentUser;
     }
 }
