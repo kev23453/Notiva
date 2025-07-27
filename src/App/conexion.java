@@ -1,38 +1,59 @@
 package App;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import Modules.Sesion;
+import Modules.User;
+
+import java.sql.*;
 
 public class conexion {
-
-    private static final String URL = "jdbc:mysql://localhost:3306/Notiva";
+    private static final String URL = "jdbc:mysql://localhost:3306/notiva";
     private static final String USER = "root";
-    private static final String PASSWORD = "123456";
+    private static final String PASSWORD = "033004";
 
     public static Connection obtenerConexion() {
-        Connection conn = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Conexión exitosa a la base de datos");
-        } catch (ClassNotFoundException e) {
-            System.err.println("Error: Driver MySQL no encontrado " + e.getMessage());
+            return DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
-            System.err.println("Error al conectar a la base de datos: " + e.getMessage());
+            System.out.println("❌ Error al conectar: " + e.getMessage());
+            return null;
         }
-        return conn;
     }
 
     public static void cerrarConexion(Connection conn) {
         if (conn != null) {
             try {
                 conn.close();
-                System.out.println("Conexión cerrada");
             } catch (SQLException e) {
-                System.err.println("Error al cerrar la conexión: " + e.getMessage());
+                e.printStackTrace();
             }
         }
+    }
+
+    // ✅ Método para login
+    public static User loginAndGetUser(String email, String password) {
+        String query = "SELECT id_usuario, username, correo, password FROM usuario WHERE correo = ? AND password = ?";
+
+        try (Connection conn = obtenerConexion();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, email);
+            stmt.setString(2, password);
+
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int id = rs.getInt("id_usuario");
+                String username = rs.getString("username");
+                String correo = rs.getString("correo");
+                String pass = rs.getString("password");
+
+                Sesion sesion = new Sesion();
+                sesion.login(); // marcamos como logueado
+
+                return new User(id, username, correo, pass, sesion);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; // ❌ si no existe el usuario
     }
 }

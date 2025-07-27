@@ -1,4 +1,7 @@
 package GUI;
+import App.conexion;
+import Modules.User;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -19,8 +22,8 @@ import java.awt.event.MouseEvent;
 public class Login {
 
     public JFrame frame;
-    private JTextField textField;
-    private JPasswordField passwordField;
+    private JTextField txtEmail;
+    private JPasswordField txtPassword;
 
     public Login() {
         initialize();
@@ -73,28 +76,28 @@ public class Login {
         lblNewLabel.setBounds(147, 11, 98, 48);
         panel_1.add(lblNewLabel);
 
-        textField = new JTextField();
-        textField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-        textField.setBounds(55, 181, 281, 42);
-        panel_1.add(textField);
-        textField.setColumns(10);
+        txtEmail = new JTextField();
+        txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 15));
+        txtEmail.setBounds(55, 181, 281, 42);
+        panel_1.add(txtEmail);
+        txtEmail.setColumns(10);
 
-        String userPlaceholder = "Username";
-        textField.setText(userPlaceholder);
-        textField.setForeground(Color.GRAY);
-        textField.addFocusListener(new FocusAdapter() {
+        String userPlaceholder = "Email";
+        txtEmail.setText(userPlaceholder);
+        txtEmail.setForeground(Color.GRAY);
+        txtEmail.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
-                if (textField.getText().equals(userPlaceholder)) {
-                    textField.setText("");
-                    textField.setForeground(Color.BLACK);
+                if (txtEmail.getText().equals(userPlaceholder)) {
+                    txtEmail.setText("");
+                    txtEmail.setForeground(Color.BLACK);
                 }
             }
             @Override
             public void focusLost(FocusEvent e) {
-                if (textField.getText().isEmpty()) {
-                    textField.setForeground(Color.GRAY);
-                    textField.setText(userPlaceholder);
+                if (txtEmail.getText().isEmpty()) {
+                    txtEmail.setForeground(Color.GRAY);
+                    txtEmail.setText(userPlaceholder);
                 }
             }
         });
@@ -108,36 +111,60 @@ public class Login {
         lblNewLabel_1.setBounds(233, 312, 113, 13);
         panel_1.add(lblNewLabel_1);
 
-        JButton btnNewButton = new JButton("Ingresar");
-        btnNewButton.setBackground(new Color(192, 192, 192));
-        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 17));
-        btnNewButton.setBounds(147, 354, 117, 29);
-        panel_1.add(btnNewButton);
+        JButton btnIngresar = new JButton("Ingresar");
+        btnIngresar.setBackground(new Color(192, 192, 192));
+        btnIngresar.setFont(new Font("Tahoma", Font.PLAIN, 17));
+        btnIngresar.setBounds(147, 354, 117, 29);
+        panel_1.add(btnIngresar);
 
-        passwordField = new JPasswordField();
-        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 15));
-        passwordField.setBounds(55, 259, 281, 42);
-        panel_1.add(passwordField);
+        btnIngresar.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                String email = txtEmail.getText();
+                String password = new String(txtPassword.getPassword());
+
+                User user = conexion.loginAndGetUser(email, password);
+
+                if (user != null) {
+                    System.out.println("Login exitoso: " + user.getUserName());
+
+                    User.setCurrentUser(user);
+
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.frame.setVisible(true);
+
+                    frame.dispose();
+
+                } else {
+                    System.out.println("Credenciales incorrectas");
+                }
+            }
+        });
+
+        txtPassword = new JPasswordField();
+        txtPassword.setFont(new Font("Tahoma", Font.PLAIN, 15));
+        txtPassword.setBounds(55, 259, 281, 42);
+        panel_1.add(txtPassword);
         
         String passPlaceholder = "Password";
-        passwordField.setEchoChar((char)0); 
-        passwordField.setText(passPlaceholder);
-        passwordField.setForeground(Color.GRAY);
-        passwordField.addFocusListener(new FocusAdapter() {
+        txtPassword.setEchoChar((char)0); 
+        txtPassword.setText(passPlaceholder);
+        txtPassword.setForeground(Color.GRAY);
+        txtPassword.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
-                if (String.valueOf(passwordField.getPassword()).equals(passPlaceholder)) {
-                    passwordField.setText("");
-                    passwordField.setForeground(Color.BLACK);
-                    passwordField.setEchoChar('•'); 
+                if (String.valueOf(txtPassword.getPassword()).equals(passPlaceholder)) {
+                    txtPassword.setText("");
+                    txtPassword.setForeground(Color.BLACK);
+                    txtPassword.setEchoChar('•'); 
                 }
             }
             @Override
             public void focusLost(FocusEvent e) {
-                if (String.valueOf(passwordField.getPassword()).isEmpty()) {
-                    passwordField.setForeground(Color.GRAY);
-                    passwordField.setText(passPlaceholder);
-                    passwordField.setEchoChar((char)0); 
+                if (String.valueOf(txtPassword.getPassword()).isEmpty()) {
+                    txtPassword.setForeground(Color.GRAY);
+                    txtPassword.setText(passPlaceholder);
+                    txtPassword.setEchoChar((char)0); 
                 }
             }
         });
@@ -170,3 +197,12 @@ public class Login {
         panel_1.add(lblNewLabel_6);
     }
 }
+// Obtener usuario activo
+//User activo = User.getCurrentUser();
+//
+//if (activo != null && activo.isActive()) {
+//        System.out.println("Usuario activo ID: " + activo.getUserId());
+//        System.out.println("Nombre: " + activo.getUserName());
+//        } else {
+//        System.out.println("No hay usuario logueado");
+//}
