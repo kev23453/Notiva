@@ -35,5 +35,26 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <ANNOTATIONS>
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+        </ANNOTATIONS>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+        </NATIVE>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+        </SOURCES>
+        <jarDirectory url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" recursive="false" />
+        <jarDirectory url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
