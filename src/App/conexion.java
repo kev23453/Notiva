@@ -8,11 +8,8 @@ import java.sql.*;
 public class conexion {
     private static final String URL = "jdbc:mysql://localhost:3306/notiva";
     private static final String USER = "root";
-<<<<<<< HEAD
-    private static final String PASSWORD = "1248Skarn@rol%";
-=======
     private static final String PASSWORD = "";
->>>>>>> 571c84f29ebf0f8508b64bac9ab382ac04dc6e1c
+
 
     public static Connection obtenerConexion() {
         try {
