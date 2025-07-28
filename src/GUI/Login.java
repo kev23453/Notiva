@@ -197,12 +197,3 @@ public class Login {
         panel_1.add(lblNewLabel_6);
     }
 }
-// Obtener usuario activo
-//User activo = User.getCurrentUser();
-//
-//if (activo != null && activo.isActive()) {
-//        System.out.println("Usuario activo ID: " + activo.getUserId());
-//        System.out.println("Nombre: " + activo.getUserName());
-//        } else {
-//        System.out.println("No hay usuario logueado");
-//}

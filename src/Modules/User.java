@@ -34,6 +34,10 @@ public class User {
         return userId;
     }
 
+    public String getUserIdString() {
+    	return ""+userId;
+    }
+    
     public String getUserName() {
         return userName;
     }
@@ -49,7 +53,7 @@ public class User {
     public Sesion getLastSesion() {
         return lastSesion;
     }
-
+    
     // Métodos para el usuario activo global
     public static void setCurrentUser(User user) {
         currentUser = user;
@@ -58,4 +62,5 @@ public class User {
     public static User getCurrentUser() {
         return currentUser;
     }
+   
 }
