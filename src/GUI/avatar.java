@@ -105,9 +105,4 @@ public class avatar extends JFrame {
         botones.add(boton);
         getContentPane().add(boton);
     }
-
-    public static void main(String[] args) {
-        avatar ventana = new avatar();
-        ventana.setVisible(true);
-    }
 }
