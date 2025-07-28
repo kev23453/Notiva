@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.Color;
 
 public class Dashboard {
@@ -46,7 +48,14 @@ public class Dashboard {
 
 		JButton btnNewButton_3 = new JButton("Perfil");
 		toolBar.add(btnNewButton_3);
-
+		
+		btnNewButton_3.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        datosPersonales ventana = new datosPersonales();
+		        ventana.setVisible(true);
+		    }
+		});
+	
 		JButton btnNewButton_5 = new JButton("Cerrar sesion");
 		toolBar.add(btnNewButton_5);
 
@@ -132,5 +141,7 @@ public class Dashboard {
 		chartPanel.setVisible(true);
 		chartPanel.repaint();
 		frame.getContentPane().add(chartPanel);
+			
 	}
+	
 }
