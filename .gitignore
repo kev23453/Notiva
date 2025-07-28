@@ -1,0 +1,35 @@
+# Archivos de compilación
+*.class
+*.log
+/build/
+./bin/
+/out/
+/target/
+
+# IDEs
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Dependencias locales
+/lib/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.swp
+*.swo

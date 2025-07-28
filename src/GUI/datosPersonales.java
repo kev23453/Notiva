@@ -2,13 +2,12 @@ package GUI;
 
 import Modules.User;
 import App.conexion;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.sql.*;
-import GUI.avatar;
 
 public class datosPersonales extends JFrame {
 
@@ -53,7 +52,7 @@ public class datosPersonales extends JFrame {
         lblAvatarImagen = new JLabel("\tElegir Avatar", SwingConstants.CENTER);
         lblAvatarImagen.setBounds(177, 20, 138, 138);
         panel_1.add(lblAvatarImagen);
-        
+
         lblAvatarImagen.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2));
         lblAvatarImagen.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -75,15 +74,29 @@ public class datosPersonales extends JFrame {
             }
         });
 
-
         User usuarioActivo = User.getCurrentUser();
         if (usuarioActivo != null) {
             String rutaAvatar = conexion.obtenerRutaAvatarPorUsuario(usuarioActivo.getUserId());
             if (rutaAvatar != null) {
-                ImageIcon icono = new ImageIcon(getClass().getResource(rutaAvatar));
-                Image imgEscalada = icono.getImage().getScaledInstance(138, 138, Image.SCALE_SMOOTH);
-                lblAvatarImagen.setIcon(new ImageIcon(imgEscalada));
-                lblAvatarImagen.setText(null);
+                try {
+                    ImageIcon icono;
+                    if (rutaAvatar.startsWith("/") || rutaAvatar.contains("/")) {
+                        URL url = getClass().getResource(rutaAvatar);
+                        if (url == null) throw new Exception("Recurso no encontrado: " + rutaAvatar);
+                        icono = new ImageIcon(url);
+                    } else {
+                        icono = new ImageIcon(rutaAvatar);
+                    }
+
+                    Image imgEscalada = icono.getImage().getScaledInstance(138, 138, Image.SCALE_SMOOTH);
+                    lblAvatarImagen.setIcon(new ImageIcon(imgEscalada));
+                    lblAvatarImagen.setText(null);
+                } catch (Exception ex) {
+                    System.err.println("Error al cargar avatar: " + ex.getMessage());
+                    cargarAvatarPorDefecto();
+                }
+            } else {
+                cargarAvatarPorDefecto();
             }
         }
 
@@ -150,7 +163,6 @@ public class datosPersonales extends JFrame {
 
                 try {
                     if (existeDatosUsuario(conexionDB, User.getCurrentUser().getUserIdString())) {
-                        // UPDATE
                         String sqlUpdate = "UPDATE datos_usuario SET nombre = ?, apellido = ?, biografia = ?, sexo = ? WHERE id_usuario = ?";
                         try (PreparedStatement stmt = conexionDB.prepareStatement(sqlUpdate)) {
                             stmt.setString(1, txtName.getText().trim());
@@ -173,7 +185,6 @@ public class datosPersonales extends JFrame {
                             }
                         }
                     } else {
-                        // INSERT
                         String sqlInsert = "INSERT INTO datos_usuario (id_usuario, nombre, apellido, biografia, sexo) VALUES (?, ?, ?, ?, ?)";
                         try (PreparedStatement stmt = conexionDB.prepareStatement(sqlInsert)) {
                             stmt.setString(1, User.getCurrentUser().getUserIdString());
@@ -235,6 +246,22 @@ public class datosPersonales extends JFrame {
             stmt.setString(1, idUsuario);
             ResultSet rs = stmt.executeQuery();
             return rs.next();
+        }
+    }
+
+    private void cargarAvatarPorDefecto() {
+        try {
+            URL url = getClass().getResource("/img/default-avatar.png");
+            if (url != null) {
+                ImageIcon icono = new ImageIcon(url);
+                Image imgEscalada = icono.getImage().getScaledInstance(138, 138, Image.SCALE_SMOOTH);
+                lblAvatarImagen.setIcon(new ImageIcon(imgEscalada));
+                lblAvatarImagen.setText(null);
+            } else {
+                System.err.println("No se encontró el avatar por defecto.");
+            }
+        } catch (Exception ex) {
+            System.err.println("Error al cargar avatar por defecto: " + ex.getMessage());
         }
     }
 }
