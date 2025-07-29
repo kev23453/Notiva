@@ -1,4 +1,7 @@
 package GUI;
+
+import GUI.tareas.*;
+
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
 
@@ -14,6 +17,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
+
+import Modules.Tarea;
 
 public class Dashboard {
 
@@ -42,6 +47,16 @@ public class Dashboard {
 
 		JButton btnNewButton_1 = new JButton("Tareas");
 		toolBar.add(btnNewButton_1);
+		
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tareasFeedInicio ventanaFeed = new tareasFeedInicio();
+				ventanaFeed.setVisible(true);
+			}
+		});
+		
+		/*======================================================================*/
+		
 
 		JButton btnNewButton_2 = new JButton("Notas");
 		toolBar.add(btnNewButton_2);
