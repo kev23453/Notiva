@@ -63,14 +63,14 @@ public class Dashboard {
 
 		JButton btnNewButton_3 = new JButton("Perfil");
 		toolBar.add(btnNewButton_3);
-		
+
 		btnNewButton_3.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		        datosPersonales ventana = new datosPersonales();
-		        ventana.setVisible(true);
-		    }
+			public void actionPerformed(ActionEvent e) {
+				datosPersonales ventana = new datosPersonales();
+				ventana.setVisible(true);
+			}
 		});
-	
+
 		JButton btnNewButton_5 = new JButton("Cerrar sesion");
 		toolBar.add(btnNewButton_5);
 
@@ -156,7 +156,7 @@ public class Dashboard {
 		chartPanel.setVisible(true);
 		chartPanel.repaint();
 		frame.getContentPane().add(chartPanel);
-			
+
 	}
-	
+
 }
