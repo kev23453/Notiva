@@ -18,6 +18,7 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JOptionPane;
 
 public class Login {
 
@@ -126,17 +127,17 @@ public class Login {
                 User user = conexion.loginAndGetUser(email, password);
 
                 if (user != null) {
-                    System.out.println("Login exitoso: " + user.getUserName());
-
+                	JOptionPane message = new JOptionPane();
+                	message.showMessageDialog(null, "Bienvenido " + user.getUserName());
                     User.setCurrentUser(user);
 
                     Dashboard dashboard = new Dashboard();
                     dashboard.frame.setVisible(true);
-
+                                       
                     frame.dispose();
 
                 } else {
-                    System.out.println("Credenciales incorrectas");
+        			JOptionPane.showMessageDialog(null, "Credenciales incorrectas");
                 }
             }
         });
