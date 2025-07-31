@@ -79,11 +79,20 @@ public class datosPersonales extends JFrame {
         User usuarioActivo = User.getCurrentUser();
         if (usuarioActivo != null) {
             String rutaAvatar = conexion.obtenerRutaAvatarPorUsuario(usuarioActivo.getUserId());
-            if (rutaAvatar != null) {
-                ImageIcon icono = new ImageIcon(getClass().getResource(rutaAvatar));
-                Image imgEscalada = icono.getImage().getScaledInstance(138, 138, Image.SCALE_SMOOTH);
-                lblAvatarImagen.setIcon(new ImageIcon(imgEscalada));
-                lblAvatarImagen.setText(null);
+            if (rutaAvatar != null && !rutaAvatar.isEmpty()) {
+                try {
+                    ImageIcon icono = new ImageIcon(getClass().getResource(rutaAvatar));
+                    if (icono.getImage() != null) {
+                        Image imgEscalada = icono.getImage().getScaledInstance(138, 138, Image.SCALE_SMOOTH);
+                        lblAvatarImagen.setIcon(new ImageIcon(imgEscalada));
+                        lblAvatarImagen.setText(null);
+                    } else {
+                        System.err.println("No se pudo cargar el ícono desde la ruta: " + rutaAvatar);
+                    }
+                } catch (Exception e) {
+                    System.err.println("Error al cargar la imagen del avatar: " + e.getMessage());
+                    e.printStackTrace();
+                }
             }
         }
 
