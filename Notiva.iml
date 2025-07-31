@@ -42,8 +42,21 @@
           <root url="jar://$USER_HOME$/Downloads/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <NATIVE>
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+        </NATIVE>
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" />
+        </SOURCES>
+        <jarDirectory url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" recursive="false" />
+        <jarDirectory url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" recursive="false" />
+        <jarDirectory url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" recursive="false" type="SOURCES" />
+        <jarDirectory url="jar://$USER_HOME$/Downloads/okhttp-5.1.0.jar!/" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="mysql-connector-j-9.3.0" level="project" />
+    <orderEntry type="library" name="jfreechart-1.0.19" level="project" />
+    <orderEntry type="library" name="jcommon-1.0.23" level="project" />
   </component>
 </module>
